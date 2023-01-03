@@ -252,6 +252,8 @@ io.on('connection', async function (socket) {
 	};
 });
 
-http.listen(3000, () => {
-	console.log("Started");
+const port = process.env.PORT || 3000;
+
+http.listen(port, () => {
+	console.log("Started " + port);
 });
